@@ -1,0 +1,28 @@
+﻿<script>
+  const ROOM_ID = "<%= roomId %>"
+</script>
+<script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+<script src="/socket.io/socket.io.js" defer></script>
+<script src="/jsVideo/videoscript.js" defer></script>
+
+<div class="video-main-container">
+
+<div class="video-header">
+  <%= roomId %>
+
+  <div id="balbesnames"><%= balbes.name %></div>
+  <div id="balbesnam">boingo13</div>
+</div>
+
+<div id="video-grid"></div>
+
+</div>
+
+
+<div id="balbesname">
+  <% if (balbes != "") { %>
+    balbes is <%= balbes.name %>
+  <% } else { %>
+    balbess is 0 <%= balbes %>
+  <% } %>
+</div>

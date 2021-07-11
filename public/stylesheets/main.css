@@ -1,0 +1,27 @@
+﻿@import 'shared/index.css';
+@import 'shared/adm-index.css';
+@import 'shared/adm-content.css';
+@import 'shared/auth.css';
+@import 'shared/cli-content.css';
+@import 'shared/videotours.css';
+@import 'shared/temporaal.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  /*transition: .5s ease-in-out; */
+}
+body {
+  background: url(https://mir-cdn.behance.net/v1/rendition/project_modules/max_1200/115da797884953.5ecfd8829785a.png);
+  font-family: 'NewsGoth Cn BT [Rus by me]', arial, sans-serif;  
+  font-size: 20px;
+  color: white;
+}
+a {
+	text-decoration: none;
+	outline: none;  
+	color: white; 
+}
+.error-message {
+  color: hsl(var(--color-danger-hue), 100%, 50%);
+}

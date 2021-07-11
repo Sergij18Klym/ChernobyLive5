@@ -1,0 +1,9 @@
+﻿<ul class="tourgrid">
+  <% tours.forEach(tour => { %>
+  <li>
+    <a href="/admin/tours/<%= tour.id %>" class="btn-id-link">
+      TOUR - <%= tour.id %>
+    </a>
+  </li>  
+  <% }) %>
+</ul>

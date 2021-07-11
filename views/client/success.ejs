@@ -1,0 +1,33 @@
+﻿<span id="loginStatus" style="visibility:visible; position:absolute; color:rgba(0,0,0,0)"><= loginStatus ></span>
+
+<div class="booking-imgcover">
+<%- include('./_client_header2') %>
+
+<div class="booking-container">
+  <div class="yourtourz">
+    <h1>Your Tour Booking is SUCCESSFUL!</h1>
+    <h4>Thank You for choosing us!</h4>
+    <% tour.forEach(tur => { %>
+      <p>Your tour [ id:<span class="spantxt"> <%= tur.id %> </span>] 
+        starts at <span class="spantxt"><%= tur.startDate.toDateString() %></span></p>
+    <% }) %>
+    <br>
+    <h4>View Your Cabinet:</h4>
+    <a href="../../client-cabinet/<%= customer.id %>"><%= customer.name %></a>
+  </div>
+</div>
+</div>
+<footer class="foot">
+  <div>© 2020, ChernobyLive | bb018 sk </div>
+</footer>
+
+<script>
+  var loginStatus = document.getElementById("loginStatus").innerText;
+  if (loginStatus != "") {
+    document.getElementById("login-container").style.visibility = "hidden";
+    document.getElementById("cab-container").style.visibility = "visible";
+  } else {
+    document.getElementById("login-container").style.visibility = "visible";
+    document.getElementById("cab-container").style.visibility = "hidden";
+  }
+</script>

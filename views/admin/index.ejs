@@ -1,0 +1,24 @@
+﻿<%- include('./_admin_header') %>
+
+<div style="position: relative; height: 80px; background: red; opacity: 0.01;">
+  dummy
+</div>
+
+<div style="position: relative; margin-left: 200px; color: lime;">
+  Admin's in da room.
+</div>
+
+<div class="adm-container">
+  <h1 class="adm-title">Recently added tours:</h1>
+  <div class="yourtourz">
+    <% tours.forEach(tour => { %>
+      <p><a href="/admin/tours/<%= tour.id %>">
+        TOUR - <%= tour.id %>
+      </a></p>
+    <% }) %>
+  </div>
+</div>
+
+<footer>
+  <div>© 2020, ChernobyLive | bb018 sk </div>
+</footer>

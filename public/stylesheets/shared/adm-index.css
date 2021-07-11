@@ -1,0 +1,56 @@
+﻿.logo2 {
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.adm-header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(40,40,40,0.9));
+  font-size: 20pt;
+  font-weight: 400;
+}
+.adm-headercontainer1, .adm-headercontainer2 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.adm-headercontainer2 {
+  left: 50%;
+  top: -100px;
+}
+.adm-ulcontainer {
+  position: relative;
+  display: flex;
+  padding-right: 25%;
+  padding-left: 25%;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.adm-ulcontainer li {
+  list-style: none;
+  width: 50%;
+  text-align: center;
+}
+.adm-ulcontainer li a:hover {
+  color: #ffe08d;
+}
+.adm-title {
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+}/*
+footer {
+  padding: 20px 20px;   
+  background: #313235;
+  position: relative;
+  margin-top: 40px;
+  font-size: 20pt;
+}  */
+
+
+

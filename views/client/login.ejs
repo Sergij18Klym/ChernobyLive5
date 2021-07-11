@@ -1,0 +1,41 @@
+﻿  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
+
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body backgro" 
+      style="background:rgba(79,79,79,0.6); border:1px solid rgb(128,128,128)"
+    />
+      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+      <% include ../partials/messages %>
+      <form action="/client/login" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+      <p class="lead mt-4">
+        Never participated in our tours? <a href="/client/register">Get a Register!</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<a href="/"><img src="../images/logo2.png" class="auth-logo"></a>

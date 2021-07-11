@@ -1,0 +1,92 @@
+﻿<%- include('../_admin_header_common') %>
+
+<div class="adm-container-search">
+  <form class="searchform" action="/admin/tours" method="GET">
+    <h3>Search Tour</h3>
+    <div class="form-row">
+      <div class="form-item">
+        <label>TourType</label>
+          <select name="tourType" class="selectus">
+            <option value="">All</option>
+            <option value="oneDay">oneDay</option>
+            <option value="twoDay">twoDay</option>
+          </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-item">
+        <label>Start After</label>
+        <input type="date" name="startAfter" value="<%= searchOptions.startAfter %>">
+      </div>
+      <div class="form-item">
+        <label>Start Before</label>
+        <input type="date" name="startBefore" value="<%= searchOptions.startBefore %>">
+      </div>
+    </div>
+    <div class="form-row form-row-end">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+  </form>
+</div>
+
+<div style="position: relative; height: 200px; background: red; opacity: 0.01;">
+  dummy
+</div>
+
+<div class="adm-container">
+  <h1 class="adm-title">Tours:</h1>
+  <table class="adm-table">
+  <thead><tr>
+    <th>ID</th></th><th>Create Date</th><th>TourType</th><th>Language</th><th>StartDate</th><th>Actuality</th><th></th>
+  </tr></thead>
+  <tbody>
+<% tours.forEach(tour => { %>
+  <tr>
+  <div class="author-row">
+    <td>
+      <a class="btn-id-link" href="/admin/tours/<%= tour.id %>"><%= tour.id %></a>
+    </td>
+    <td>
+      <div class="author-name"><%= tour.createDate.toDateString() %></div>
+    </td>
+    <td>
+      <div class="author-name"><%= tour.tourType %></div>
+    </td>
+    <td>
+      <div class="author-name"><%= tour.language %></div>
+    </td>
+    <td>
+      <div class="author-name"><%= tour.startDate.toDateString() %></div>
+    </td>
+    <td>
+      <div class="author-name" id="tourActuality"><%= tour.actual %></div>
+    </td>
+    <td>
+      <div class="btn-row">
+        <a class="btn-link" href="/admin/tours/<%= tour.id %>/edit">Edit</a>
+        <%- include('../../partials/deleteForm', { url: `/admin/tours/${tour.id}` }) %>
+      </div>
+    </td>
+  </div>
+  </tr>
+<% }) %>
+  </tbody>
+</table>
+
+<a class="btn-add" href="/admin/tours/new">Add Tour</a>
+</div>
+
+<footer class="foot2">
+  <div>© 2020, ChernobyLive | bb018 sk </div>
+</footer>
+
+<script>
+  var options = document.getElementsByName("tourType")[0].options,
+          name = "<%= searchOptions.tourType %>";
+  for(i = 0; i < options.length; i++){
+    if(options[i].text.indexOf(name) > -1){
+      options[i].selected = true;
+      break;
+    }
+  }
+</script>

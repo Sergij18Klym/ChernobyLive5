@@ -1,0 +1,117 @@
+﻿  .imgcover {
+    max-width: 100%;
+    height: 768px;
+    background: url(../../images/indexcover.png) no-repeat center center;
+    background-size: cover;
+  }
+  #adminfield, #clientloginfield, #clientcabfield {
+  	position: absolute;
+    top: 2%;
+    font-weight: 600;
+    font-size: 18pt;
+  }
+  #adminfield {
+    right: 2%;
+    font-style: italic;
+  }
+  #clientloginfield, #clientcabfield {
+  	left: 2%;
+  }
+  .yourtours {
+    color: #ffe08d;
+    font-weight: 900;
+  }
+  .logo {
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translate(-50%, 0);
+  }
+  .ind-centraltext {
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .chevron, .ind-ourtours, .ind-tourcontainer {
+  	position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .chevron {
+  	width: 120px;
+    bottom: 4%;
+  }
+  .ind-ourtours {
+  	bottom: -20%;
+  	font-size: 40pt;
+  }
+  .ind-tourcontainer1, .ind-tourcontainer2, .ind-tourcontainerbottom {
+  	background: rgb(79,79,79);
+  	width: 310px;
+  	text-align: center;
+  }
+  .ind-tourcontainer1, .ind-tourcontainer2 {
+    position: absolute;
+    bottom: -80px;
+    transform: translate(-50%, 50%);
+    height: 204px;
+    padding-top: 5px;
+    box-shadow: 2px 0 2px 0 rgb(40,40,40);
+  }
+  .ind-tourcontainer1 {
+    left: calc(50% - 165px);
+  }
+  .ind-tourcontainer2 {
+    left: calc(50% + 165px);
+  }
+  .ind-tourcontainerbottom {
+    position: relative;
+    margin-top: -3px;
+    height: 60px;
+    padding: 5px;
+    margin-bottom: 30px;
+    border-bottom-right-radius: 3%;
+    border-bottom-left-radius: 3%;
+    box-shadow: 2px 3px 2px 0 rgb(40,40,40);
+  }
+  .imgtourtype {
+    width: 300px;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+  }
+  .imgtourtypecaption {
+    position: absolute;   
+    width: 70%;   
+    left: 50%;   
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 30pt;
+    font-weight: 900;
+  }
+  .ind-footer {
+    padding: 20px 20px;   
+    background: #313235;
+    position: relative;
+    margin-top: 300px;
+    font-size: 20pt;
+  }
+  @media (max-width: 720px) {
+    .logo {
+      width: 150px;
+    }
+    .ind-tourcontainer1, .ind-tourcontainer2 {
+      left: 50%;
+    }
+    .ind-tourcontainer2 {
+      top: 160px;
+    }
+    .ind-footer {
+      bottom: -250px;
+    }
+  }
+

@@ -1,0 +1,9 @@
+﻿<ul class="tourgrid">
+    <% participants.forEach(participant => { %>
+    <li>
+        <a href="/admin/participants/<%= participant.id %>" class="btn-id-link">
+            PARTICIPANT - <%= participant.id %>
+        </a>
+    </li>
+    <% }) %>
+</div>

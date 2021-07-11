@@ -1,0 +1,495 @@
+﻿
+
+<!--div class="imgcover">
+
+  <div id="clientloginfield">
+    <a href="/client/login">log in</a> | <a href="/client/register">sign up</a>
+  </div>
+  <div id="clientcabfield">
+    <a href="/client-cabinet" class="yourtours">your tours</a> | <a href="/client/logout">log out</a>
+  </div>
+  <div id="adminfield"><a href="/admin">
+    admin
+  </a></div>
+
+  <a href="/">
+    <img class="logo" src="images/logo.png">
+  </a>
+  <div class="ind-centraltext">
+    <h1 style="font-size:60px;">ONLINE TOURS</h1><br>
+    <p>Travelling revolutionized. Meet CHERNOBYL LIVE, the world’s first live-stream tours to Chernobyl. Enjoy 60+ minutes live tour with your guide. All virtual, accessible literally for anybody around the globe.</p>
+  </div>
+
+  <img class="chevron" src="images/chevron-menu-arrow.png">
+  <h1 class="ind-ourtours">our tours</h1>
+
+</div>
+<div class="ind-tourcontainer">
+  <div class="ind-tourcontainer1">
+    <a href="/tour-configuration/oneday-tours/">
+        <img class="imgtourtype" src="images/tourtype1.png">
+        <p class="imgtourtypecaption">PRIPYAT CITY TOUR</p>
+    </a>
+    <p class="ind-tourcontainerbottom">This is the call of Pripyat. Explore the city of ghosts and unrealized dreams.</p>
+  </div>
+  <div class="ind-tourcontainer2">
+    <a href="/tour-configuration/twoday-tours/">
+        <img class="imgtourtype" src="images/tourtype2.png">
+        <p class="imgtourtypecaption">CHERNOBYL-2 TOUR</p>
+    </a>    
+    <p class="ind-tourcontainerbottom">Explore the hidden secrets of Soviet military machine.</p>
+  </div>
+</div>
+
+<footer class="ind-footer">
+  <div>© 2020, ChernobyLive | bb018 sk </div>
+</footer>
+
+
+<script>
+  var loginStatus = document.getElementById("loginStatus").innerText;
+  if (loginStatus != "") {
+    document.getElementById("clientloginfield").style.visibility = "hidden";
+    document.getElementById("clientcabfield").style.visibility = "visible";
+  } else {
+    document.getElementById("clientloginfield").style.visibility = "visible";
+    document.getElementById("clientcabfield").style.visibility = "hidden";
+  }
+</script-->
+
+
+<header class="header" id="header">
+  <nav class="nav container">
+      <a href="#" class="nav__logo">
+          <img src="assets/img/logo2.png" id="nav_logo-ch">
+      </a>
+      <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+              <li class="nav__item">
+                  <a href="#home" class="nav__link active-link">Online Tours</a>
+              </li>
+              <li class="nav__item">
+                  <a href="#about" class="nav__link">About Us</a>
+              </li>
+              <li class="nav__item">
+                  <a href="#discover" class="nav__link">Chernobyl Zone</a>
+              </li>
+              <li class="nav__item">
+                  <a href="#place" class="nav__link">Brand Shop</a>
+              </li>
+              <li class="nav__item">
+                <a href="/client/login">
+                  <span id="account-icon"></span>
+                </a>
+              </li>
+          </ul>
+          <ul class="nav__dark">
+              <li>
+                  <a href="/client/login" class="change-theme-name">Sign In</a>
+              </li>
+              <li>
+                  <a href="/client/register" class="change-theme-name">Sign Up</a>
+              </li>
+          </ul>
+          <i class="ri-close-line nav__close" id="nav-close"></i>
+      </div>
+      <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-function-line"></i>
+      </div>
+  </nav>
+</header> 
+
+<main class="main">
+  <!--==================== HOME ====================-->
+  <section class="home" id="home">
+      <img src="assets/img/pripyat2.jpg" class="home__img">
+      <img src="assets/img/ferris.jpg" class="home__img">
+      <img src="assets/img/reactor2.jpg" class="home__img">
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="home__container container grid">
+          <div class="home__data">
+              <h1 class="home__data-title">Experience the <br><b>Chernobyl Zone</b></h1>
+              <span class="home__data-subtitle">Discover the most outstanding</span>
+              <span class="home__data-subtitle" style="margin-bottom: 3rem;">
+                  historic sites of the Exclusion Zone
+              </span>
+              <a href="#discover" class="button button--explore">Explore</a>
+          </div>
+          <div class="home__social">
+              <span class="slide-button" onclick="currentSlide(1)"></span> 
+              <span class="slide-button" onclick="currentSlide(2)"></span> 
+              <span class="slide-button" onclick="currentSlide(3)"></span> 
+          </div>
+          <div class="home__info">
+              <div>
+                  <span class="home__info-title">Chernobyl Zone Tour</span>
+                  <a href="" class="button button--flex button--link home__info-button">
+                      More <i class="ri-arrow-right-line"></i>
+                  </a>
+              </div>
+              <div class="home__info-overlay">
+                  <img src="assets/img/sign1.jpg" class="home__info-img">
+              </div>
+          </div>
+      </div>
+  </section>
+<!--==================== FEATURES ====================-->      
+<section class="features section">
+<div class="features-container container grid">
+  <div class="features-card">
+      <img src="assets/img/icon-vr1.png" class="feature-img">
+      <span class="feature-title">100% Online</span>
+      <span class="feature-text">
+          Explore the world of Chernobyl Zone from home accompanied by the professional guide
+      </span>
+  </div>
+  <div class="features-card">
+      <img src="assets/img/icon-youtube.png" class="feature-img">
+      <span class="feature-title">1+ Hour Duration</span>
+      <span class="feature-text">
+          Follow the story and experience for 60+ mins
+      </span>
+  </div>
+  <div class="features-card">
+      <img src="assets/img/icon-calendar1.png" class="feature-img">
+      <span class="feature-title">Flexible Calendar</span>
+      <span class="feature-text">
+          Visit the Chernobyl Site without any need for travelling
+      </span>
+  </div>
+  <div class="features-card">
+      <img src="assets/img/icon-ferris.png" class="feature-img">
+      <span class="feature-title">Best Of</span>
+      <span class="feature-text">
+          Discover all the iconic historic sites of Chernobyl
+      </span>
+  </div>
+</div>
+</section>
+<!--==================== DISCOVER ====================-->
+<section class="discover section" id="discover">
+<h2 class="section__title">Our Online Tours</h2>
+<div class="discover__container container swiper-container">
+  <div class="swiper-wrapper">
+      <!--==================== DISCOVER 1 ====================-->
+      <div class="discover__card swiper-slide" onmouseover="showDisco(1)" onmouseout="hideDisco()">
+          <img src="assets/img/sign2.jpg" class="discover__img">
+          <div class="discover__data red_block">
+              <h3 class="discover__title">Chernobyl Zone<br> Tour</h3>
+              <span class="discover__description">Available this week</span>
+          </div>
+          <a class="disc_expl" href="/tour-configuration/oneday-tours/">Explore</a>
+          <button class="button button--flex place__button">
+              <i class="ri-arrow-right-line"></i>
+          </button>
+      </div>
+                    
+      <!--==================== DISCOVER 2 ====================-->
+      <div class="discover__card swiper-slide" onmouseover="showDisco(2)" onmouseout="hideDisco()">
+          <img src="assets/img/ferris2.jpg" class="discover__img">
+          <div class="discover__data">
+              <h2 class="discover__title">Pripyat City<br>Tour</h2>
+              <span class="discover__description">Available this week</span>
+          </div>
+          <a class="disc_expl" href="/tour-configuration/oneday-tours/">Explore</a>
+          <button class="button button--flex place__button">
+              <i class="ri-arrow-right-line"></i>
+          </button>
+      </div>
+
+      <!--==================== DISCOVER 3 ====================-->
+      <div class="discover__card swiper-slide" onmouseover="showDisco(3)" onmouseout="hideDisco()">
+          <img src="assets/img/reactor5.jpg" class="discover__img">
+          <div class="discover__data">
+              <h2 class="discover__title">Chernobyl Power<br>Plant Tour</h2>
+              <span class="discover__description">Available in 3 weeks</span>
+          </div>
+          <a class="disc_expl" href="/tour-configuration/twoday-tours/">Explore</a>
+                  <button class="button button--flex place__button">
+                      <i class="ri-arrow-right-line"></i>
+                  </button>
+      </div>
+  </div>
+</div>
+</section>
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+<div class="about__container container grid">
+  <div class="about__data">
+      <img src="assets/img/logo2-darker-simpl.png" class="logo-simpl">
+      <p class="about__description">
+          We are the team of ChernobyLive. We don't do usual tours. 
+          We bring you the experience straight out of the heart of Chernobyl. And you don't have to do anything.
+          Just choose the desired date and plug-in for a virtual discovery tour.
+      </p>
+      <a href="" class="button button--flex about-more-but">
+          More <i class="ri-arrow-right-line"></i>
+      </a>
+  </div>
+  <div class="about__img">
+      <div class="about__img-overlay">
+          <img src="assets/img/zver.jpg" class="about__img-one">
+      </div>
+      <div class="about__img-overlay">
+          <img src="assets/img/pripyat3.jpg" class="about__img-two">
+      </div>
+  </div>
+</div>
+</section>
+<!--==================== PLACES ====================-->
+<section class="place section" id="place">
+<h2 class="section__title">Our Brand Content</h2>
+<div class="place__container container grid">
+  <!--==================== PLACES CARD 1 ====================-->
+  <div class="place__card">
+      <img src="assets/mockup/raincoat.jpg" alt="" class="place__img">
+      
+      <div class="place__content">
+          <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,8</span>
+          </span>
+
+          <div class="place__data">
+              <h3 class="place__title">Raincoat</h3>
+              <span class="place__price">$59</span>
+          </div>
+      </div>
+
+      <button class="button button--flex place__button">
+          <i class="ri-arrow-right-line"></i>
+      </button>
+  </div>
+
+  <!--==================== PLACES CARD 2 ====================-->
+  <div class="place__card">
+      <img src="assets/mockup/respirator.jpg" alt="" class="place__img">
+      
+      <div class="place__content">
+          <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">5,0</span>
+          </span>
+
+          <div class="place__data">
+              <h3 class="place__title">Face Respirator</h3>
+              <span class="place__price">$5</span>
+          </div>
+      </div>
+
+      <button class="button button--flex place__button">
+          <i class="ri-arrow-right-line"></i>
+      </button>
+  </div>
+
+  <!--==================== PLACES CARD 3 ====================-->
+  <div class="place__card">
+      <img src="assets/mockup/gasmask.jpg" alt="" class="place__img">
+      
+      <div class="place__content">
+          <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,9</span>
+          </span>
+
+          <div class="place__data">
+              <h3 class="place__title">Gas Mask</h3>
+              <span class="place__price">$29</span>
+          </div>
+      </div>
+
+      <button class="button button--flex place__button">
+          <i class="ri-arrow-right-line"></i>
+      </button>
+  </div>
+
+  <!--==================== PLACES CARD 4 ====================-->
+  <div class="place__card">
+      <img src="assets/mockup/glasses.jpg" alt="" class="place__img">
+      
+      <div class="place__content">
+          <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,8</span>
+          </span>
+
+          <div class="place__data">
+              <h3 class="place__title">Protective Glasses</h3>
+              <span class="place__price">$19</span>
+          </div>
+      </div>
+
+      <button class="button button--flex place__button">
+          <i class="ri-arrow-right-line"></i>
+      </button>
+  </div>
+
+  <!--==================== PLACES CARD 5 ====================-->
+  <div class="place__card">
+      <img src="assets/mockup/Backpack.jpg" alt="" class="place__img">
+      
+      <div class="place__content">
+          <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,8</span>
+          </span>
+
+          <div class="place__data">
+              <h3 class="place__title">Backpack</h3>
+              <span class="place__price">$49</span>
+          </div>
+      </div>
+
+      <button class="button button--flex place__button">
+          <i class="ri-arrow-right-line"></i>
+      </button>
+  </div>
+          <!--==================== PLACES CARD 6 ====================-->
+          <div class="place__card">
+              <img src="assets/mockup/geiger.jpg" alt="" class="place__img">
+              
+              <div class="place__content">
+                  <span class="place__rating">
+                      <i class="ri-star-line place__rating-icon"></i>
+                      <span class="place__rating-number">4,8</span>
+                  </span>
+  
+                  <div class="place__data">
+                      <h3 class="place__title">Geiger Counter</h3>
+                      <span class="place__price">$89</span>
+                  </div>
+              </div>
+  
+              <button class="button button--flex place__button">
+                  <i class="ri-arrow-right-line"></i>
+              </button>
+          </div>
+                  <!--==================== PLACES CARD 7 ====================-->
+  <div class="place__card">
+      <img src="assets/mockup/boot1.jpg" alt="" class="place__img">
+      
+      <div class="place__content">
+          <span class="place__rating">
+              <i class="ri-star-line place__rating-icon"></i>
+              <span class="place__rating-number">4,8</span>
+          </span>
+
+          <div class="place__data">
+              <h3 class="place__title">Boots</h3>
+              <span class="place__price">$49</span>
+          </div>
+      </div>
+
+      <button class="button button--flex place__button">
+          <i class="ri-arrow-right-line"></i>
+      </button>
+  </div>
+</div>
+</section>
+
+      <!--==================== SUBSCRIBE ====================-->
+      <section class="subscribe section">
+          <div class="subscribe__bg">
+              <div class="subscribe__container container">
+                  <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
+                  <p class="subscribe__description">Subscribe to our newsletter and get a 
+                      special 80% discount.
+                  </p>
+                  <form action="" class="subscribe__form">
+                      <input type="text" placeholder="Enter email" class="subscribe__input">
+                      <button class="button">
+                          Subscribe
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </section>
+
+</main>
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+<div class="footer__container container grid">
+  <div class="footer__content grid">
+      <div class="footer__data">
+          <h3 class="footer__title">ChernobyLive</h3>
+          <p class="footer__description">Experience an adventure <br> straight from your home.
+          </p>
+          <div>
+              <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                  <i class="ri-facebook-box-fill"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" class="footer__social">
+                  <i class="ri-twitter-fill"></i>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                  <i class="ri-instagram-fill"></i>
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                  <i class="ri-youtube-fill"></i>
+              </a>
+          </div>
+      </div>
+
+      <div class="footer__data">
+          <h3 class="footer__subtitle">Online Tours</h3>
+          <ul>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Chernobyl Zone</a>
+              </li>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Pripyat City</a>
+              </li>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Chernobyl Power Plant</a>
+              </li>
+          </ul>
+      </div>
+
+      <div class="footer__data">
+          <h3 class="footer__subtitle">About</h3>
+          <ul>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Our Activity</a>
+              </li>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Chernobyl</a>
+              </li>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Brand Stuff</a>
+              </li>
+          </ul>
+      </div>
+
+      <div class="footer__data">
+          <h3 class="footer__subtitle">Support</h3>
+          <ul>
+              <li class="footer__item">
+                  <a href="" class="footer__link">FAQs</a>
+              </li>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Support Center</a>
+              </li>
+              <li class="footer__item">
+                  <a href="" class="footer__link">Contact Us</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="footer__rights">
+      <p class="footer__copy">&#169; 2021 bb018sk</p>
+  </div>
+</div>
+</footer>
+
+
+       <!--========== SCROLL UP ==========-->
+       <a href="#" class="scrollup" id="scroll-up">
+          <i class="ri-arrow-up-line scrollup__icon"></i>
+      </a>
+      <script src="assets/js/scrollreveal.min.js"></script>
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <script src="assets/js/main.js"></script>

@@ -1,0 +1,53 @@
+﻿<%- include('../_admin_header_common_common') %>
+<div class="adm-containerooo">
+  <a href="/admin/tours/" class="back">// back</a><br>
+  <h2 class="adm-title">Tour <i><%= tour.id %></i></h2>
+  <table class="adm-table">
+    <thead><tr>
+      <th>Create Date</th><th>Tour Type</th><th>Language</th><th>Start Date</th><th>Actuality</th>
+      <th>Tour's Participants</th><th>Guide</th>
+    </tr></thead>
+    <tbody>
+    <tr>
+      <td>
+        <div class="author-name"><%= tour.createDate.toDateString() %></div>
+      </td>
+      <td>
+        <div class="author-name"><%= tour.tourType %></div>
+      </td>
+      <td>
+        <div class="author-name"><%= tour.language %></div>
+      </td>
+      <td>
+        <div class="author-name"><%= tour.startDate.toDateString() %></div>
+      </td>
+      <td>
+        <div class="author-name"><%= tour.actual %></div>
+      </td>
+      <td>
+        <% if (toursParticipants.length > 0) { %>
+          <%- include('../../partials/participantGrid', { participants: toursParticipants }) %>
+        <% } else { %>
+          <div>~~EMPTY`~~</div>
+        <% } %>
+      </td>
+      <td>
+        <div class="author-name">
+          <a href="/admin/guides/<%= tour.guide.id %>" class="btn-id-link"><%= tour.guide.name %></a>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="btn-row">
+    <a class="btn-link" href="/admin/tours/<%= tour.id %>/edit">Edit</a>
+    <%- include('../../partials/deleteForm', { url: `/admin/tours/${tour.id}` }) %>
+  </div>
+  <br>
+  <div class="btn-row">
+    <a class="btn-link" href="/videotours/<%= tour.id %>">Online-TOUR</a>
+  </div>
+</div>
+<footer>
+  <div>© 2020, ChernobyLive | bb018 sk </div>
+</footer>

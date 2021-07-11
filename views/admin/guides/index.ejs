@@ -1,0 +1,56 @@
+﻿<%- include('../_admin_header_common') %>
+
+<div class="adm-container-search">
+
+<form class="searchform" action="/admin/guides" method="GET">
+  <h3>Search Guides by Name</h3>
+  <input type="text" name="name" placeholder="name" value="<%= searchOptions.name %>">
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">search</button>
+  </div>
+</form>
+
+</div>
+<div class="adm-container">
+
+<h1 class="adm-title">Guides:</h1>
+
+<table class="adm-table">
+  <thead><tr>
+    <th>ID</th><th>Hired Date</th><th>Name</th><th>Phone</th>
+    <th></th>
+  </tr></thead>
+  <tbody>
+<% guides.forEach(guide => { %>
+<tr>
+  <div class="author-row">
+    <td>
+      <a class="btn-id-link" href="/admin/guides/<%= guide.id %>"><%= guide.id %></a>
+    </td>
+    <td>
+      <div class="author-name"><%= guide.hireDate.toDateString() %></div>
+    </td>
+    <td>
+      <div class="author-name"><%= guide.name %></div>
+    </td>
+    <td>
+      <div class="author-name"><%= guide.phone %></div>
+    </td>
+    <td>
+    <div class="btn-row">
+      <a class="btn-link" href="/admin/guides/<%= guide.id %>/edit">edit</a>
+      <%- include('../../partials/deleteForm', { url: `/admin/guides/${guide.id}` }) %>
+    </div>
+    </td>
+  </div>
+</tr>
+<% }) %>
+  </tbody>
+</table>
+
+<a class="btn-add" href="/admin/guides/new">Add Guide</a>
+</div>
+
+<footer class="foot">
+  <div>© 2020, ChernobyLive | bb018 sk </div>
+</footer>
